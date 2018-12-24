@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from './AddFriendInput.css';
+import styles from './AddPlayerInput.css';
 
-class AddFriendInput extends Component {
+class AddPlayerInput extends Component {
   render() {
     return (
       <input
         type="text"
         autoFocus={true}
-        className={classnames('form-control', styles.addFriendInput)}
+        className={classnames('form-control', styles.addPlayerInput)}
         placeholder="Type the name of a player"
         value={this.state.name}
         onChange={this.handleChange.bind(this)}
@@ -32,14 +32,14 @@ class AddFriendInput extends Component {
   handleSubmit(e) {
     const name = e.target.value.trim();
     if (e.which === 13) {
-      this.props.addFriend(name);
+      this.props.addPlayer(name);
       this.setState({ name: '' });
     }
   }
 }
 
-AddFriendInput.propTypes = {
-  addFriend: PropTypes.func.isRequired,
+AddPlayerInput.propTypes = {
+  addPlayer: PropTypes.func.isRequired,
 };
 
-export default AddFriendInput;
+export default AddPlayerInput;

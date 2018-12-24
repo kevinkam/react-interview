@@ -1,7 +1,7 @@
 import * as types from '../constants/ActionTypes';
 
 const initialState = {
-  friendsById: [
+  playersById: [
     {
       name: 'LeBron James',
       team: 'LOS ANGELES LAKERS',
@@ -41,13 +41,13 @@ const initialState = {
   ],
 };
 
-export default function friends(state = initialState, action) {
+export default function players(state = initialState, action) {
   switch (action.type) {
-    case types.ADD_FRIEND:
+    case types.ADD_PLAYER:
       return {
         ...state,
-        friendsById: [
-          ...state.friendsById,
+        playersById: [
+          ...state.playersById,
           {
             name: action.name,
             team: 'LOS ANGELES LAKERS',
@@ -55,20 +55,20 @@ export default function friends(state = initialState, action) {
           },
         ],
       };
-    case types.DELETE_FRIEND:
+    case types.DELETE_PLAYER:
       return {
         ...state,
-        friendsById: state.friendsById.filter(
+        playersById: state.playersById.filter(
           (item, index) => index !== action.id,
         ),
       };
-    case types.STAR_FRIEND:
-      let friends = [...state.friendsById];
-      let friend = friends.find((item, index) => index === action.id);
-      friend.starred = !friend.starred;
+    case types.STAR_PLAYER:
+      let players = [...state.playersById];
+      let player = players.find((item, index) => index === action.id);
+      player.starred = !player.starred;
       return {
         ...state,
-        friendsById: friends,
+        playersById: players,
       };
 
     default:

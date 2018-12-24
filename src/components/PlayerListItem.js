@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from './FriendListItem.css';
+import styles from './PlayerListItem.css';
 
-class FriendListItem extends Component {
+class PlayerListItem extends Component {
   render() {
     return (
-      <li className={styles.friendListItem}>
-        <div className={styles.friendInfos}>
+      <li className={styles.playerListItem}>
+        <div className={styles.playerInfos}>
           <div>
             <span>{this.props.name}</span>
           </div>
@@ -17,10 +17,10 @@ class FriendListItem extends Component {
             </small>
           </div>
         </div>
-        <div className={styles.friendActions}>
+        <div className={styles.playerActions}>
           <button
             className={`btn btn-default ${styles.btnAction}`}
-            onClick={() => this.props.starFriend(this.props.id)}
+            onClick={() => this.props.starPlayer(this.props.id)}
           >
             <i
               className={classnames('fa', {
@@ -31,7 +31,7 @@ class FriendListItem extends Component {
           </button>
           <button
             className={`btn btn-default ${styles.btnAction}`}
-            onClick={() => this.props.deleteFriend(this.props.id)}
+            onClick={() => this.props.deletePlayer(this.props.id)}
           >
             <i className="fa fa-trash" />
           </button>
@@ -41,13 +41,13 @@ class FriendListItem extends Component {
   }
 }
 
-FriendListItem.propTypes = {
+PlayerListItem.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   team: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
   starred: PropTypes.bool,
-  starFriend: PropTypes.func.isRequired,
+  starPlayer: PropTypes.func.isRequired,
 };
 
-export default FriendListItem;
+export default PlayerListItem;
