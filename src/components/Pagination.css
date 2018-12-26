@@ -1,17 +1,18 @@
 :local(.paginateLink) {
-    cursor: pointer;
-    color: #fff;
-    margin: 0 8px;
-    font-size: 12px;
+  cursor: pointer;
+  color: #fff;
+  margin: 0 8px;
+  font-size: 12px;
 }
 :local(.paginateLink):hover {
-    color:#fff;
+  color: #fff;
 }
 :local(.paginateLink.disabled) {
-    pointer-events: none;
-    cursor: not-allowed;
+  pointer-events: none;
+  cursor: not-allowed;
+  color: #aaa;
 }
 
 :local(.paginatePage) {
-    color: #fff;
+  color: #fff;
 }
