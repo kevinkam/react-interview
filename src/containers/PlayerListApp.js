@@ -17,9 +17,6 @@ class PlayerListApp extends Component {
       starPlayer: this.props.starPlayer,
     };
 
-    console.log('playersById = ', playersById);
-    console.log('actions = ', actions);
-
     return (
       <div className={styles.playerListApp}>
         <h1>NBA Players</h1>
