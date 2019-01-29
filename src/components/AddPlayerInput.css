@@ -1,15 +1,6 @@
-:local(.wrapper) {
-  width: 100%;
-  display: flex;
-  background: #fff;
-  padding: 8px;
-}
-
 :local(.addPlayerInput) {
   border-radius: 0;
   border-color: #abaaaa;
-  margin-right: 8px;
-}
-:local(.addPlayerSelect) {
-  margin-right: 8px;
+  border-left: 0;
+  border-right: 0;
 }
