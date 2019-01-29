@@ -38,10 +38,7 @@ class Pagination extends Component {
       perListItems
     };
 
-    this.setState(
-      { currentPage: page },
-      () => onPageChanged(paginationData)
-    );
+    onPageChanged(paginationData)
   };
 
   getTotalPages = () => {
@@ -60,7 +57,7 @@ Pagination.propTypes = {
   totalItems: PropTypes.number.isRequired,
   currentPage: PropTypes.number,
   perListItems: PropTypes.number,
-  onPageChanged: PropTypes.func,
+  onPageChanged: PropTypes.func.isRequired,
 };
 
 Pagination.defaultProps = {

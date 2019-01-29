@@ -1,45 +1,7 @@
 import * as types from '../constants/ActionTypes';
-import { DEFAULT_PAGE, PER_LIST_ITEMS} from '../constants/';
+import { DEFAULT_PAGE, PER_LIST_ITEMS, DEFAULT_PLAYERS } from '../constants/';
 
-const defaultPlayers = [
-  {
-    name: 'LeBron James',
-    team: 'LOS ANGELES LAKERS',
-    position: 'SF',
-    starred: true,
-  },
-  {
-    name: 'Kevin Duran',
-    team: 'GOLDEN STATE WARRIORS',
-    position: 'SF',
-    starred: false,
-  },
-  {
-    name: 'Anthony Davis',
-    team: 'NEW ORLEANS PELICANS',
-    position: 'PF',
-    starred: false,
-  },
-  {
-    name: 'Stephen Curry',
-    team: 'GOLDEN STATE WARRIORS',
-    position: 'PG',
-    starred: false,
-  },
-  {
-    name: 'James Harden',
-    team: 'HOUSTON ROCKETS',
-    position: 'SG',
-    starred: false,
-  },
-  {
-    name: 'Kawhi Leonard',
-    team: 'TORONTO RAPTORS',
-    position: 'SF',
-    starred: false,
-  },
-]
-
+const defaultPlayers = DEFAULT_PLAYERS;
 const initialState = {
   filteredPlayers: defaultPlayers,
   currentPlayers: [],
